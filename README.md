@@ -4,13 +4,15 @@
 
 * change the key pair 
 
+```
 terraform init
-
+```
+```
 terraform plan
-
+```
+```
 terraform apply
-
--- to tear down
-
+```
+```
 terraform destroy
-
+```
