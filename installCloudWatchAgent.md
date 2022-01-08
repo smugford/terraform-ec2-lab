@@ -1,12 +1,8 @@
-<h2>Install CloudWatch Agent</h2>
+<h2>How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?</h2>
     <div class="container">
-        <div class="block two first">
-            <h2>
-            How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?
-            </h2>
-            <div class="wrap">
-            Last updated: 2021-02-01
-
+        <div class="block two first">    
+        <div class="wrap">
+            
 I want to use the unified Amazon CloudWatch agent to push metrics and logs from my Amazon Elastic Compute Cloud (Amazon EC2) instance to CloudWatch. How can I do this?
 
 Short description
