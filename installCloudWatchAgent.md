@@ -1,38 +1,24 @@
-<h2>Example of code</h2>
-
-<pre>
+<h2>Install CloudWatch Agent</h2>
     <div class="container">
         <div class="block two first">
-            <h2>Your title</h2>
+            <h2>
+            How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?
+            </h2>
             <div class="wrap">
-            //Your content
-            </div>
-        </div>
-    </div>
-</pre>
-
-
-
-Click here to return to Amazon Web Services homepage
-Contact Us
-Support 
-English 
-My Account 
-Sign In 
-re:Invent Products Solutions Pricing Documentation Learn Partner Network AWS Marketplace Customer Enablement Events Explore More
-How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?
-Last updated: 2021-02-01
+            Last updated: 2021-02-01
 
 I want to use the unified Amazon CloudWatch agent to push metrics and logs from my Amazon Elastic Compute Cloud (Amazon EC2) instance to CloudWatch. How can I do this?
 
 Short description
 Regardless of your platform (Windows or Linux), the steps to install the unified Amazon CloudWatch agent are the same:
 
-Create an AWS Identity and Access Management (IAM) role to run the CloudWatch agent. Then, attach that IAM role to the EC2 instance.
-Download and install the CloudWatch agent.
-Create an agent configuration file that specifies the metrics/logs that you plan to push to CloudWatch from your EC2 instance.
-Start the CloudWatch agent using the configuration file that you created in step 3.
-Resolution
+* Create an AWS Identity and Access Management (IAM) role to run the CloudWatch agent. Then, attach that IAM role to the EC2 instance.
+* Download and install the CloudWatch agent.
+* Create an agent configuration file that specifies the metrics/logs that you plan to push to CloudWatch from your EC2 instance.
+* Start the CloudWatch agent using the configuration file that you created in step 3.
+
+<h1>Resolution<h1>
+
 Note: Before you begin, be sure that you established internet connectivity in your EC2 instance. Internet connectivity is necessary to connect your EC2 instance to the required endpoints.
 
 Installing the unified CloudWatch agent (Amazon Linux or Amazon Linux 2)
@@ -111,44 +97,9 @@ For steps on starting and stopping the CloudWatch agent in Linux and Windows, se
 
 Note: When modifying the agent configuration file, start the agent using the fetch-config command to be sure that the agent reflects your changes.
 
-Did this article help?
+            </div>
+        </div>
+    </div>
 
-Do you need billing or technical support?
-Learn About AWS
-What Is AWS?
-What Is Cloud Computing?
-AWS Inclusion, Diversity & Equity
-What Is DevOps?
-What Is a Container?
-What Is a Data Lake?
-AWS Cloud Security
-What's New
-Blogs
-Press Releases
-Resources for AWS
-Getting Started
-Training and Certification
-AWS Solutions Portfolio
-Architecture Center
-Product and Technical FAQs
-Analyst Reports
-AWS Partner Network
-Developers on AWS
-Developer Center
-SDKs & Tools
-.NET on AWS
-Python on AWS
-Java on AWS
-PHP on AWS
-JavaScript on AWS
-Help
-Contact Us
-AWS Careers
-File a Support Ticket
-Knowledge Center
-AWS re:Post
-AWS Support Overview
-Legal
-Amazon is an Equal Opportunity Employer: Minority / Women / Disability / Veteran / Gender Identity / Sexual Orientation / Age.
-Language عربي Bahasa Indonesia Deutsch English Español Français Italiano Português Tiếng Việt Türkçe Ρусский ไทย 日本語 한국어 中文 (简体) 中文 (繁體)
-Privacy | Site Terms | Cookie Preferences | © 2022, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+
+
