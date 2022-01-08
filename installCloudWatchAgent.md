@@ -5,18 +5,19 @@
 
         This document is a deeper dive into this AWS Premium Support Article 
         
-        <p>https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-push-metrics-unified-agent</p>
+        https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-push-metrics-unified-agent
             
+        </div>
+        <div>
+        Short description
+        Regardless of your platform (Windows or Linux), the steps to install the unified Amazon CloudWatch agent are the same:
 
-Short description
-Regardless of your platform (Windows or Linux), the steps to install the unified Amazon CloudWatch agent are the same:
+        * Create an AWS Identity and Access Management (IAM) role to run the CloudWatch agent. Then, attach that IAM role to the EC2 instance.
+        * Download and install the CloudWatch agent.
+        * Create an agent configuration file that specifies the metrics/logs that you plan to push to CloudWatch from your EC2 instance.
+        * Start the CloudWatch agent using the configuration file that you created in step 3.
 
-* Create an AWS Identity and Access Management (IAM) role to run the CloudWatch agent. Then, attach that IAM role to the EC2 instance.
-* Download and install the CloudWatch agent.
-* Create an agent configuration file that specifies the metrics/logs that you plan to push to CloudWatch from your EC2 instance.
-* Start the CloudWatch agent using the configuration file that you created in step 3.
-
-<h1>Resolution<h1>
+<h1>Resolution/Solution<h1>
 
 Note: Before you begin, be sure that you established internet connectivity in your EC2 instance. Internet connectivity is necessary to connect your EC2 instance to the required endpoints.
 
