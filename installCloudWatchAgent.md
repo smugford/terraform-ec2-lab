@@ -39,11 +39,11 @@ Installing the unified CloudWatch agent (Amazon Linux or Amazon Linux 2)
 2.    Download and install the unified CloudWatch agent on your EC2 instance:
 
 Download:
-<div class="wrap">
-    wget https://s3.changetoyourregion.amazonaws.com/amazoncloudwatch-agent-changetoyourregion/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
-    Install:
-</div>
-    sudo rpm -U ./amazon-cloudwatch-agent.rpm
+        <div class="wrap">
+            wget https://s3.changetoyourregion.amazonaws.com/amazoncloudwatch-agent-changetoyourregion/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
+            Install:
+            sudo rpm -U ./amazon-cloudwatch-agent.rpm
+        </div>
 3.    Create the agent configuration file.
 
 Note: For simplicity, you can create the agent configuration file using the wizard. Later, you can manually edit the file to add or remove metrics or logs. For more information, see the following section, Tips for completing the agent configuration file wizard.
