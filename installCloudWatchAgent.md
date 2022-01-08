@@ -1,12 +1,9 @@
-<h2>How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?</h2>
-    <div class="container">
-        <div class="block two first">    
-        <div class="wrap">
-
-        This document is a deeper dive into this AWS Premium Support Article 
+# How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?</h2>
+   
+## This document is a deeper dive into this AWS Premium Support Article 
         
-        https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-push-metrics-unified-agent
-            
+[INSTALL_CLOUDWATCH_AGENT](https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-push-metrics-unified-agent "Install Unified Cloudwatch Agent")
+
 ---    
 Short description
 Regardless of your platform (Windows or Linux), the steps to install the unified Amazon CloudWatch agent are the same:
@@ -39,50 +36,61 @@ Installing the unified CloudWatch agent (Amazon Linux or Amazon Linux 2)
 2.    Download and install the unified CloudWatch agent on your EC2 instance:
 
 Download:
-        <div class="wrap">
-            wget https://s3.changetoyourregion.amazonaws.com/amazoncloudwatch-agent-changetoyourregion/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
-            Install:
-            sudo rpm -U ./amazon-cloudwatch-agent.rpm
-        </div>
+```
+wget https://s3.changetoyourregion.amazonaws.com/amazoncloudwatch-agent-changetoyourregion/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm
+``` 
+Install:
+```
+sudo rpm -U ./amazon-cloudwatch-agent.rpm
+```
 3.    Create the agent configuration file.
 
 Note: For simplicity, you can create the agent configuration file using the wizard. Later, you can manually edit the file to add or remove metrics or logs. For more information, see the following section, Tips for completing the agent configuration file wizard.
 
 Run the wizard:
-
+```
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+```
 4.    Start the CloudWatch agent:
-
+```
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:configuration-file-path -s
+```
 Note: Replace configuration-file-path with the configuration file path that you received in step 3.
 
 Metrics and logs are now pushed to CloudWatch. By default, the agent pushes metrics to NameSpace CWAgent.
 
 Installing the unified CloudWatch agent (Windows)
+
 1.    Follow step 1 above to create an IAM role to run the CloudWatch agent on your EC2 instance.
 
 2.    Download and install the unified CloudWatch agent on your EC2 instance:
 
 Download:
-
+```
 https://s3.<region>.amazonaws.com/amazoncloudwatch-agent-<region>/windows/amd64/latest/amazon-cloudwatch-agent.msi
-Move to the directory containing the package, and then enter the following:
+```
 
+Move to the directory containing the package, and then enter the following:
+```
 msiexec /i amazon-cloudwatch-agent.msi
+```
 3.    Create the agent configuration file:
 
 Note: For simplicity, you can create the agent configuration file using the wizard. Later, you can manually edit the file to add or remove metrics or logs. See "Tips for completing the agent configuration file wizard" below.
-
+```
 cd "C:\Program Files\Amazon\AmazonCloudWatchAgent"
 amazon-cloudwatch-agent-config-wizard.exe
+```
 By default, the wizard creates the agent configuration file in the following location: C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json.
 
 4.    Start the CloudWatch agent. Enter the following in PowerShell as an administrator:
-
+```
 & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1 -a fetch-config -m ec2 -c file:<configuration-file-path> -s      
+```
 Example command:
-
+```
 & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1 -a fetch-config -m ec2 -c file:'C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json' -s
+```
 Metrics and logs are now pushed to CloudWatch. By default, the agent pushes metrics to NameSpace CWAgent.
 
 Tips for configuring the agent configuration file wizard
@@ -99,6 +107,3 @@ Note: When modifying the agent configuration file, start the agent using the fet
             </div>
         </div>
     </div>
-
-
-
