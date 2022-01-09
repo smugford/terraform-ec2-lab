@@ -1,6 +1,6 @@
 # How do I install and configure the unified CloudWatch agent to push metrics and logs from my EC2 instance to CloudWatch?</h2>
    
-## This document is a deeper dive into this AWS Premium Support Article 
+## This document is a deeper dive into the following AWS Premium Support Article 
         
 [Install Unified Cloudwatch Agent](https://aws.amazon.com/premiumsupport/knowledge-center/cloudwatch-push-metrics-unified-agent "Install Unified Cloudwatch Agent")
 
